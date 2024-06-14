@@ -1,0 +1,110 @@
+/*Importar fonte*/
+@import url('https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*Formatações Padrão*/
+:root{
+    --pretoPrincipal:#050908;
+    --douradoPrincipal:#E9AE0C;
+}
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'K2D',sans serif;
+    color: black;
+
+    
+}
+
+body{   
+    background-color: var(--pretoPrincipal);
+    padding: 1rem;
+}
+
+section{
+    margin-top:1.5rem;
+    
+}
+/*Formatação do header*/
+/*Logo*/
+header{
+    margin-top: 0.5;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+div.logo{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+header > h1{
+    color: var(--douradoPrincipal);
+}
+
+/*Main*/
+
+/*Section instructions*/
+
+.instructions > p{
+    font-size: 1.125rem;
+    color: white;
+    text-align: justify;
+}
+
+/*Section container*/
+
+.container{
+    width: 80vw;
+    background-color: white;
+    border-radius: 0.5rem;
+    color: black;    
+    padding: 1rem;
+    text-align: start;
+}
+
+/*Formulario*/
+form{
+    font-size: 1.3rem;
+}
+#selectMes{
+    margin-top: 0.5rem;
+}
+
+option{
+    font-size: 1.15rem;
+}
+
+select{
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem ;
+}
+
+.inputTxt{
+    margin-top: 0.5rem;
+    width: 5rem;
+    font-size: 1.15rem;
+    margin-bottom: 0.8rem ;
+    
+}
+/*Botão de calcular*/
+.btnCalc{
+    margin-top: 1rem;
+    background-color: var(--douradoPrincipal);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/*Resultado*/
+
+.formataResult{
+    
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
