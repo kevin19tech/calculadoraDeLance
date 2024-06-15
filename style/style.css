@@ -98,6 +98,7 @@ select{
     margin-bottom: 0.8rem ;
     
 }
+/*Botões*/
 /*Botão de calcular*/
 .btnPrincipal{
     margin-top: 1rem;
@@ -113,6 +114,13 @@ select{
 #btnLimpar{
     background-color: var(--cinzaPrincipal);
 }
+
+/*Botão Add*/
+
+.btnAdd{
+    background: none;
+    border: none;
+}
 /*Resultado*/
 
 .formataResult{
@@ -122,6 +130,15 @@ select{
     font-size: 1.5rem;
 }
 
+.divBtn{
+    margin-top: 0.5rem;
+    padding: 0rem 1rem;
+    text-align: right;
+    
+}
+.divBtn p {
+    color: white;
+}
 
 /*Footer*/
 
