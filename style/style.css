@@ -5,6 +5,7 @@
 :root{
     --pretoPrincipal:#050908;
     --douradoPrincipal:#E9AE0C;
+    --cinzaPrincipal: gray;
 }
 
 *{
@@ -98,7 +99,7 @@ select{
     
 }
 /*Botão de calcular*/
-.btnCalc{
+.btnPrincipal{
     margin-top: 1rem;
     background-color: var(--douradoPrincipal);
     border: none;
@@ -108,7 +109,9 @@ select{
     font-size: 1rem;
     cursor: pointer;
 }
-
+#btnLimpar{
+    background-color: var(--cinzaPrincipal);
+}
 /*Resultado*/
 
 .formataResult{

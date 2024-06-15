@@ -3,7 +3,7 @@ let contMonth = 0
 // Capturar valor do select (mês escolhido)
 let tagSelect = document.getElementById('selectMes')
 let resultado = document.getElementById('result')
-
+let txtContemplados = document.querySelector('input#contemplados')
 //
 //Captuarar menor lance
 let inputLowest = document.getElementById('lowestTxt')
@@ -42,18 +42,20 @@ function calcular(){
         
         resultado.innerHTML = `Lance Médio: <strong>${media}%</string>`
     }
-    /*}
-    //Verifica se está vazio
-    /*if(inputLowest.value == 0 || inputHighest.value == 0){
-        alert('Pelo menos um dos campos dos lances estão vazios. Preencha com a porcentagem dos lances.')
-    }else if(){
 
-    }/*else{
-        //A conversao deve ser feita dentro da função
-        
-        
-
-    }*/
     
+}
+
+function limpar(){
+    //Limpar select
+    tagSelect.value = ""
+    //Limpar Menor lance
+    inputLowest.value = ""
+    //Limpar Maior lance
+    inputHighest.value = ""
+    //Limpar contemplados
+    txtContemplados.value = ""
+    //Resetar lance médio
+    resultado.innerHTML = `Lance Médio:`
 }
 

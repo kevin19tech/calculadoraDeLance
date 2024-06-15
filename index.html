@@ -43,8 +43,10 @@
 
                 <label for="highest">Quantidade de contemplados</label><br>
                 <input type="number" name="contemplados" id="contemplados" class="inputTxt"><br>
-
-                <input type="button" value="Calcular" onclick="calcular()" class="btnCalc" >
+                <!--Btn calcular-->
+                <input type="button" value="Calcular" onclick="calcular()" class="btnPrincipal" >
+                <!--Btn limpar-->
+                <input type="button" value="Limpar" class="btnPrincipal" id="btnLimpar" onclick="limpar()">
 
                 <div id="result" class="formataResult">
                     <p>Lance Médio: </p>
