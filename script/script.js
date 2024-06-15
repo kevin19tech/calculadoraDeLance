@@ -38,7 +38,7 @@ function calcular(){
         let highest = Number(inputHighest.value);
         
         let soma = lowest + highest
-        let media = soma / 2
+        let media = (soma / 2).toFixed(2)// toFixed usado para exibir só duas casas decimais
         
         resultado.innerHTML = `Lance Médio: <strong>${media}%</string>`
     }
