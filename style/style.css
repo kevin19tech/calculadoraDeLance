@@ -5,7 +5,7 @@
 :root{
     --pretoPrincipal:#050908;
     --douradoPrincipal:#E9AE0C;
-    --cinzaPrincipal: gray;
+    --cinzaPrincipal: rgb(202, 197, 197);
 }
 
 *{
