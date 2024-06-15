@@ -18,12 +18,19 @@
 
 body{   
     background-color: var(--pretoPrincipal);
-    padding: 1rem;
+    
 }
 
 section{
     margin-top:1.5rem;
     
+}
+
+footer{
+    margin-top: 1.5rem;
+    padding: 0;
+    margin-left: 0;
+
 }
 /*Formatação do header*/
 /*Logo*/
@@ -42,6 +49,10 @@ header > h1{
 }
 
 /*Main*/
+
+main{
+    padding: 1rem;
+}
 
 /*Section instructions*/
 
@@ -108,3 +119,16 @@ select{
 }
 
 
+/*Footer*/
+
+
+footer p{
+    color: white;
+    text-align: center;
+    margin: 0.5rem 0;
+    
+    
+}
+footer div{
+    border-bottom: 1px solid var(--douradoPrincipal);
+}
