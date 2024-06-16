@@ -6,10 +6,11 @@
     --pretoPrincipal:#050908;
     --douradoPrincipal:#E9AE0C;
     --cinzaPrincipal: rgb(202, 197, 197);
+    --verdePrincipal: rgb(44, 214, 44);
 }
 
 *{
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     font-family: 'K2D',sans serif;
     color: black;
@@ -53,6 +54,7 @@ header > h1{
 
 main{
     padding: 1rem;
+    margin: 0 auto;
 }
 
 /*Section instructions*/
@@ -72,6 +74,7 @@ main{
     color: black;    
     padding: 1rem;
     text-align: start;
+    margin: 1rem auto;
 }
 
 /*Formulario*/
@@ -100,6 +103,11 @@ select{
 }
 /*Botões*/
 /*Botão de calcular*/
+.btns{
+       display: flex;
+       justify-content: space-between;
+       
+}
 .btnPrincipal{
     margin-top: 1rem;
     background-color: var(--douradoPrincipal);
@@ -109,10 +117,19 @@ select{
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
+    margin-right: 1rem;
+    
 }
 
 #btnLimpar{
     background-color: var(--cinzaPrincipal);
+}
+
+#btnSave{
+    margin-left: auto;/*Deixa o botão salvar a direita*/
+    background-color: var(--cinzaPrincipal);
+    background-color: var(--verdePrincipal);
+
 }
 
 /*Botão Add*/
@@ -121,6 +138,7 @@ select{
     background: none;
     border: none;
 }
+
 /*Resultado*/
 
 .formataResult{
@@ -129,6 +147,7 @@ select{
     text-align: center;
     font-size: 1.5rem;
 }
+
 
 .divBtn{
     margin-top: 0.5rem;

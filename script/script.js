@@ -1,5 +1,7 @@
  //Inicializar variaveis
-let contMonth = 0 
+let contMonth = 0
+let media = 0
+let resultadosMedia = []
 // Capturar valor do select (mês escolhido)
 let tagSelect = document.getElementById('selectMes')
 let resultado = document.getElementById('result')
@@ -38,9 +40,11 @@ function calcular(){
         let highest = Number(inputHighest.value);
         
         let soma = lowest + highest
-        let media = (soma / 2).toFixed(2)// toFixed usado para exibir só duas casas decimais
+        media = (soma / 2).toFixed(2)// toFixed usado para exibir só duas casas decimais
         
         resultado.innerHTML = `Lance Médio: <strong>${media}%</string>`
+        
+        
     }
 
     
@@ -57,5 +61,11 @@ function limpar(){
     txtContemplados.value = ""
     //Resetar lance médio
     resultado.innerHTML = `Lance Médio:`
+}
+
+function salvar(){
+    resultadosMedia.push(media)
+    
+
 }
 
