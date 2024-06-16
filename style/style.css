@@ -117,12 +117,13 @@ select{
     font-weight: bold;
     font-size: 1rem;
     cursor: pointer;
-    margin-right: 1rem;
+    
     
 }
 
 #btnLimpar{
     background-color: var(--cinzaPrincipal);
+    margin-left: 1rem;
 }
 
 #btnSave{
@@ -150,9 +151,10 @@ select{
 
 
 .divBtn{
-    margin-top: 0.5rem;
+    margin-top: 0.5rem auto;
     padding: 0rem 1rem;
     text-align: right;
+
     
 }
 .divBtn p {

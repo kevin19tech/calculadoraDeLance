@@ -71,14 +71,18 @@ function salvar(){
     if(media != 0){
         alert(`O valor ${media} foi salvo.✅`)
     }else{
-        alert('Para salvar é preciso ter feito o cáculo primeiro.')
+        alert('Para salvar é preciso ter feito o cálculo primeiro.')
     }
 }
 
 /*Adicionar mês*/
 function addMes(){
     limpar()
-    txtEscolhaMes.innerHTML = ('<strong>Próximo mês</strong>')
-    contMonth++
+    if(media != 0){
+        txtEscolhaMes.innerHTML = ('<strong>Próximo mês</strong>')
+        contMonth++
+    }else{
+        alert('Para adicionar um mês é preciso ter feito o cálculo de pelo menos um mês.')
+    }
 }
 
