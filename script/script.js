@@ -6,6 +6,7 @@ let resultadosMedia = []
 let tagSelect = document.getElementById('selectMes')
 let resultado = document.getElementById('result')
 let txtContemplados = document.querySelector('input#contemplados')
+let txtEscolhaMes = document.querySelector('label.labelMonth')
 //
 //Captuarar menor lance
 let inputLowest = document.getElementById('lowestTxt')
@@ -43,7 +44,9 @@ function calcular(){
         media = (soma / 2).toFixed(2)// toFixed usado para exibir só duas casas decimais
         
         resultado.innerHTML = `Lance Médio: <strong>${media}%</string>`
-        
+        if(contMonth >= 1){
+            txtEscolhaMes.innerHTML = ('Mês')
+        }
         
     }
 
@@ -62,10 +65,20 @@ function limpar(){
     //Resetar lance médio
     resultado.innerHTML = `Lance Médio:`
 }
-
+/*Salvar*/
 function salvar(){
     resultadosMedia.push(media)
-    
+    if(media != 0){
+        alert(`O valor ${media} foi salvo.✅`)
+    }else{
+        alert('Para salvar é preciso ter feito o cáculo primeiro.')
+    }
+}
 
+/*Adicionar mês*/
+function addMes(){
+    limpar()
+    txtEscolhaMes.innerHTML = ('<strong>Próximo mês</strong>')
+    contMonth++
 }
 
