@@ -6,7 +6,7 @@
     --pretoPrincipal:#050908;
     --douradoPrincipal:#E9AE0C;
     --cinzaPrincipal: rgb(202, 197, 197);
-    --verdePrincipal: rgb(44, 214, 44);
+    --verdePrincipal: rgb(124, 216, 124);
 }
 
 *{
@@ -14,7 +14,7 @@
     padding: 0;
     font-family: 'K2D',sans serif;
     color: black;
-
+    
     
 }
 
@@ -109,10 +109,10 @@ button{
 .btns{
        display: flex;
        justify-content: space-between;
+       align-items: center;
        
 }
 .btnPrincipal{
-    margin-top: 1rem;
     background-color: var(--douradoPrincipal);
     border: none;
     padding: 0.75rem 1.5rem;
@@ -127,6 +127,16 @@ button{
 #btnLimpar{
     background-color: var(--cinzaPrincipal);
     margin-left: 1rem;
+}
+.areaToogle{
+    display: flex;
+    margin-top: -20px;
+}
+.btnToogle{
+    margin-left: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
 
 #btnSave{
@@ -146,7 +156,6 @@ button{
 /*Resultado*/
 
 .formataResult{
-    
     margin-top: 2rem;
     text-align: center;
     font-size: 1.5rem;
@@ -189,4 +198,8 @@ footer p{
 }
 footer div{
     border-bottom: 1px solid var(--douradoPrincipal);
+}
+.creditFooter a{
+    text-decoration: none;
+    color: var(--douradoPrincipal);
 }

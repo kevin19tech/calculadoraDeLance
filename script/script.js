@@ -11,10 +11,16 @@ let txtEscolhaMes = document.querySelector('label.labelMonth')
 let btnRestart = document.getElementById('restart')
 let btnMediaTotal = document.getElementById('mediaTotal')
 let btnAdd = document.getElementById('add')
+let calcBtn = document.getElementById('calc')
+let clearBtn = document.getElementById('btnLimpar')
+let saveBtn = document.getElementById('btnSave')
 //Capturar menor lance
 let inputLowest = document.getElementById('lowestTxt')
 //Capturar menor lance
 let inputHighest = document.getElementById('highestTxt')
+let imgToogleHide = document.getElementById('hide')
+let imgToogleShow = document.getElementById('show')
+
 
 //Verifica se está vazio
 function isInvalid(){
@@ -44,9 +50,9 @@ function calcular(){
         let highest = Number(inputHighest.value);
         
         let soma = lowest + highest
-        media = (soma / 2).toFixed(2)// toFixed usado para exibir só duas casas decimais
+        media = (soma / 2)// toFixed usado para exibir só duas casas decimais
         
-        resultado.innerHTML = `Lance Médio: <strong>${media}%</string>`
+        resultado.innerHTML = `Lance Médio: <strong>${media.toFixed(2)}%</string>`
         if(contMonth >= 1){
             txtEscolhaMes.innerHTML = ('Mês')
         }
@@ -72,7 +78,7 @@ function limpar(){
 function salvar(){
     resultadosMedia.push(media)
     if(media != 0){
-        alert(`O valor ${media}% foi salvo.✅`)
+        alert(`O valor ${media.toFixed(2)}% foi salvo.✅`)
         //Reaparcer botão de recomeçar
         btnRestart.style.display = 'block'
         contMonth++
@@ -111,7 +117,39 @@ function calcMediaTotal(){
             
         }
         mediaTotal = soma / total
-        resultado.innerHTML += `<br><p>O lance médio dos ${contMonth} meses informados é: ${mediaTotal}%.</p>`
+        resultado.innerHTML += `<br><p>O lance médio dos ${contMonth} meses informados é: ${mediaTotal.toFixed(2)}%.</p>`
     }
+
+
 }
 
+function restart(){
+    limpar()
+    resultadosMedia = []
+    contMonth = 0
+}
+
+function toogleHideShow(){
+    //Esconder
+    if(imgToogleShow.style.display == 'block'){
+        imgToogleShow.style.display = 'none'
+        imgToogleHide.style.display = 'block'
+        //Esconder botões
+        calcBtn.style.display = 'none'
+        clearBtn.style.display = 'none'
+        saveBtn.style.display = 'none'
+
+    }else if(imgToogleHide.style.display == 'block'){
+        imgToogleHide.style.display = 'none'
+        imgToogleShow.style.display = 'block'
+        //Mostrar botões
+        calcBtn.style.display = 'block'
+        clearBtn.style.display = 'block'
+        saveBtn.style.display = 'block'
+
+    }
+
+    
+    
+    
+}

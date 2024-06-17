@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-           <!--<img src="imagens/dna-logo.png" alt="" width="135">--> 
+           <img src="imagens/dna-logo.png" alt="" width="135">
         </div>
         <h1>Calculadora de <br>Lance Médio</h1>
     </header>
@@ -42,12 +42,24 @@
                 <input type="number" name="highestTxt" id="highestTxt" class="inputTxt"> %<br>
 
                 <label for="highest">Quantidade de contemplados</label><br>
-                <input type="number" name="contemplados" id="contemplados" class="inputTxt"><br>
+                <input type="number" name="contemplados" id="contemplados" class="inputTxt">
 
-                <!--Botõesr-->
+                <!--Btn Hide/Show-->
+                <div class="areaToogle">
+                    <a class="btnToogle" onclick="toogleHideShow()">
+                    <!--Show-->
+                       <img src="imagens/show.png" alt="Esconder" width="40px" id="show" style="display: block;" >
+                    <!--Hide-->
+                       <img src="imagens/hide.png" alt="Esconder" width="40px" id="hide" style="display: none;">
+                       
+                    </a>
+                </div>
+                
+
+                <!--Botões-->
                 <div class="btns">
                     <!--Btn calcular-->
-                    <input type="button" value="Calcular" onclick="calcular()" class="btnPrincipal" >
+                    <input type="button" value="Calcular" onclick="calcular()" class="btnPrincipal" id="calc">
                     <!--Btn limpar-->
                     <input type="button" value="Limpar" class="btnPrincipal" id="btnLimpar" onclick="limpar()">
                     <!--Btn Salvar-->
@@ -64,7 +76,7 @@
         <!--Botões finais-->
         <div class="divBtn">
             <!--Botão Recomeçar-->
-            <button class="btnBottom" id="restart">
+            <button class="btnBottom" id="restart" onclick="restart()">
                 <img src="imagens/restart.png" alt="Recomeçar cálculos" width="70px">
                 <p>Recomeçar</p>
             </button>
@@ -88,7 +100,7 @@
     <footer>
         <div>
         </div>
-        <p>Desenvolvido por Kevin</p>
+        <p class="creditFooter">Desenvolvido por <a href="https://kevin19tech.github.io/portifolioKevinGomes/" target="_blank">Kevin Gomes</a></p>
     </footer>
 </body>
 </html>
