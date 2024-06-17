@@ -61,11 +61,22 @@
             </form>
         </section>
         
-        <!--Botão para adicionar mês-->
+        <!--Botões finais-->
         <div class="divBtn">
-            <button class="btnAdd" onclick="addMes()">
-                <img src="imagens/plus.png" alt="Adicionar Mês" width="70px" style="cursor: pointer;">
-                <p>Adicionar mês</p>
+            <!--Botão Recomeçar-->
+            <button class="btnBottom" id="restart">
+                <img src="imagens/restart.png" alt="Recomeçar cálculos" width="70px">
+                <p>Recomeçar</p>
+            </button>
+             <!--Botão Lance Médio Total-->
+            <button class="btnBottom" id="mediaTotal" onclick="calcMediaTotal()">
+                <img src="imagens/percent.png" alt="Calcular porcentagem total" width="70px">
+                <p>Lance Médio Total</p>
+            </button>
+            <!--Botão para adicionar mês-->
+            <button class="btnBottom" onclick="addMes()" id="add">
+                <img src="imagens/plus.png" alt="Adicionar Mês" width="70px">
+                <p>Adicionar Mês</p>
             </button>
         </div>
     </main>

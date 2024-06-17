@@ -1,14 +1,17 @@
  //Inicializar variaveis
 let contMonth = 0
 let media = 0
+let mediaTotal = 0
 let resultadosMedia = []
 // Capturar valor do select (mês escolhido)
 let tagSelect = document.getElementById('selectMes')
 let resultado = document.getElementById('result')
 let txtContemplados = document.querySelector('input#contemplados')
 let txtEscolhaMes = document.querySelector('label.labelMonth')
-//
-//Captuarar menor lance
+let btnRestart = document.getElementById('restart')
+let btnMediaTotal = document.getElementById('mediaTotal')
+let btnAdd = document.getElementById('add')
+//Capturar menor lance
 let inputLowest = document.getElementById('lowestTxt')
 //Capturar menor lance
 let inputHighest = document.getElementById('highestTxt')
@@ -69,10 +72,16 @@ function limpar(){
 function salvar(){
     resultadosMedia.push(media)
     if(media != 0){
-        alert(`O valor ${media} foi salvo.✅`)
+        alert(`O valor ${media}% foi salvo.✅`)
+        //Reaparcer botão de recomeçar
+        btnRestart.style.display = 'block'
+        contMonth++
     }else{
         alert('Para salvar é preciso ter feito o cálculo primeiro.')
     }
+    
+    
+
 }
 
 /*Adicionar mês*/
@@ -80,9 +89,29 @@ function addMes(){
     limpar()
     if(media != 0){
         txtEscolhaMes.innerHTML = ('<strong>Próximo mês</strong>')
-        contMonth++
+        
     }else{
         alert('Para adicionar um mês é preciso ter feito o cálculo de pelo menos um mês.')
+    }
+    //Reaparecer botão de cálculo da média geral
+    if(contMonth >= 1){
+        btnMediaTotal.style.display = 'block'
+        btnAdd.style.marginLeft = 0
+    }
+}
+
+function calcMediaTotal(){
+    if(resultadosMedia.length > 1){
+        let soma = 0
+        let total = 0 
+        total = resultadosMedia.length
+        for(let pos = 0; pos < resultadosMedia.length; pos++){
+            soma += Number(resultadosMedia[pos])
+            
+            
+        }
+        mediaTotal = soma / total
+        resultado.innerHTML += `<br><p>O lance médio dos ${contMonth} meses informados é: ${mediaTotal}%.</p>`
     }
 }
 

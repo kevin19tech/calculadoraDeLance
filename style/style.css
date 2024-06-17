@@ -103,6 +103,9 @@ select{
 }
 /*Botões*/
 /*Botão de calcular*/
+button{
+    cursor: pointer;
+}
 .btns{
        display: flex;
        justify-content: space-between;
@@ -135,7 +138,7 @@ select{
 
 /*Botão Add*/
 
-.btnAdd{
+.btnBottom{
     background: none;
     border: none;
 }
@@ -154,13 +157,26 @@ select{
     margin-top: 0.5rem auto;
     padding: 0rem 1rem;
     text-align: right;
-
+    display: flex;
+    justify-content: space-between;
     
 }
 .divBtn p {
     color: white;
 }
 
+/*Botões finais*/
+
+#mediaTotal{
+    display: none;
+}
+#restart{
+    display: none;
+}
+#add{
+    /*remover quando botões finais aparecerem*/
+    margin-left: auto;
+}
 /*Footer*/
 
 
