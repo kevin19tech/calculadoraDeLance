@@ -26,7 +26,7 @@ let imgToogleShow = document.getElementById('show')
 function isInvalid(){
     if(inputLowest.value <= 0 || inputHighest.value <= 0){
         return true
-        //alert('Pelo menos um dos campos dos lances estão vazios. Preencha com a porcentagem dos lances.')
+        
     }else{
         return false
     }
@@ -44,7 +44,7 @@ function verificaMaiorCem(){
 //Função calcular
 function calcular(){
     if((isInvalid(inputLowest) || isInvalid(inputHighest)) || verificaMaiorCem(inputLowest,inputHighest)){
-        alert('Pelo menos um dos campos dos lances estão vazios ou o valor é maior do que 100%. Preencha a porcentagem dos lances corretamente.')
+        alert('Pelo menos um dos campos dos lances está vazio ou o valor é inválido. Preencha a porcentagem dos lances corretamente.')
     }else{
         let lowest = Number(inputLowest.value);
         let highest = Number(inputHighest.value);
@@ -117,7 +117,7 @@ function calcMediaTotal(){
             
         }
         mediaTotal = soma / total
-        resultado.innerHTML += `<br><p>O lance médio dos ${contMonth} meses informados é: ${mediaTotal.toFixed(2)}%.</p>`
+        resultado.innerHTML = `<br>O lance médio dos ${contMonth} meses informados é: <strong>${mediaTotal.toFixed(2)}</strong>%.`
     }
 
 
