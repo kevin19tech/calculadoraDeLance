@@ -11,6 +11,7 @@ let txtEscolhaMes = document.querySelector('label.labelMonth')
 let btnRestart = document.getElementById('restart')
 let btnMediaTotal = document.getElementById('mediaTotal')
 let btnAdd = document.getElementById('add')
+let divAdd = document.getElementsByClassName('divBtn')
 let calcBtn = document.getElementById('calc')
 let clearBtn = document.getElementById('btnLimpar')
 let saveBtn = document.getElementById('btnSave')
@@ -93,7 +94,9 @@ function salvar(){
 /*Adicionar mês*/
 function addMes(){
     limpar()
-    if(media != 0){
+    //Mudar label do mês para "Próximo mês"
+    //Só muda casp algum valor de média já tenha sido calculado e se houver a partir de um mês cadastrado
+    if((media != 0)&& contMonth >= 1){
         txtEscolhaMes.innerHTML = ('<strong>Próximo mês</strong>')
         
     }else{
@@ -118,6 +121,8 @@ function calcMediaTotal(){
         }
         mediaTotal = soma / total
         resultado.innerHTML = `<br>O lance médio dos ${contMonth} meses informados é: <strong>${mediaTotal.toFixed(2)}</strong>%.`
+    }else{
+        alert('Para calcular a média total, é preciso calcular a média de pelo menos dois meses.')
     }
 
 
@@ -127,6 +132,9 @@ function restart(){
     limpar()
     resultadosMedia = []
     contMonth = 0
+    btnMediaTotal.style.display = 'none'
+    btnRestart.style.display = 'none'
+    btnAdd.style.marginLeft = 'auto'
 }
 
 function toogleHideShow(){
